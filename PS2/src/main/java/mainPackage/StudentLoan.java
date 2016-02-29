@@ -1,5 +1,6 @@
 package mainPackage;
 import java.util.Scanner;
+import org.apache.poi.ss.formula.functions.FinanceLib;
 
 public class StudentLoan {
 	
