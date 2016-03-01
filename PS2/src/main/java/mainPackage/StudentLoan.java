@@ -10,7 +10,7 @@ import org.apache.poi.ss.formula.functions.FinanceLib;
  * increase, assuming the degree takes 4 years and interest
  * is not paid on the loans while in school. The method
  * monthlyRepayment determines the amount to be paid per
- * month.
+ * month. 
  */
 public class StudentLoan {
 	
@@ -104,7 +104,7 @@ public class StudentLoan {
 			total += tuitionCost;									//adds current tuition cost to total
 			tuitionCost *= tuitionYearToYear;						//increases tuition cost by tuitionIncrease percentage
 		}
-			return(total);											//returns total amount owed to be paid back
+		return(total);											//returns total amount owed to be paid back
 	}
 	/**
 	 * monthlyRepayment: calculates monthly payment needed to pay back loan. Uses Apache Finance Library.

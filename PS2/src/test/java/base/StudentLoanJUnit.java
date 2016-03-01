@@ -32,9 +32,9 @@ public class StudentLoanJUnit {
 	public void test_totalOwed() {
 		double tuitioncost = 10000;
 		double tuitionRisingRate = 5;
-		StudentLoan testLoan = new StudentLoan(tuitioncost, tuitionRisingRate, 0, 0);	//0 values are irrelevent to method
-		double correctValue = 43101.25;							//determined separately for values 10k and 5%
-		assertTrue(testLoan.totalOwed() == correctValue);
+		StudentLoan testLoan = new StudentLoan(tuitioncost, tuitionRisingRate, 0, 0);	//0 values are irrelevant to method
+		double correctValue = 43101.25;							//determined separately for values 10k and 5% per year
+		assertEquals("Total loan is not correct to $1", testLoan.totalOwed(), correctValue, 1);
 	}
 	
 	@Test
@@ -45,7 +45,7 @@ public class StudentLoanJUnit {
 		StudentLoan testLoan = new StudentLoan(0, 0, APR, years); //0 values are irrelevant to method
 		double amountOwed = 50000;
 		double correctRepayment = 329.98;						//determined using tool online
-		assertTrue(testLoan.monthlyRepayment(amountOwed) == correctRepayment);
+		assertEquals("Repayment Value is not correct to $1", testLoan.monthlyRepayment(amountOwed), correctRepayment, 1);
 	}
 
 }
