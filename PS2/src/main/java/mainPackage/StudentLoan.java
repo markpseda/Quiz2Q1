@@ -88,7 +88,11 @@ public class StudentLoan {
 		this.numYears = input.nextInt();
 		input.close();
 	}
-	
+	/**
+	 * totalOwed is used to calculate the amount of debt that will accumulate after 4 years of college
+	 * given tuition cost and the rate of tuition increase per year, both attributes of the StudentLoan class.
+	 * @return returns the total amount owed after four years.
+	 */
 	public double totalOwed(){
 		double tuitionCost = this.getTuitionCost();
 		double tuitionIncrease = this.getTuitionIncrease();
@@ -102,7 +106,11 @@ public class StudentLoan {
 		}
 			return(total);											//returns total amount owed to be paid back
 	}
-	
+	/**
+	 * monthlyRepayment: calculates monthly payment needed to pay back loan. Uses Apache Finance Library.
+	 * @param totalOwed : pass in the total amount owed. This, combined with APR and years are used.
+	 * @return : a double of the number of dollars that will be paid per month to pay back the loan.
+	 */
 	public double monthlyRepayment(double totalOwed){
 		double APR = this.getAPR();
 		int numYears = this.getNumYears();
